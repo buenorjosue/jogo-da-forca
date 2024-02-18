@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 10%;
+}
+
+#exibicao-palavra {
+    font-size: 3em;
+    margin-bottom: 4%;
+}
+
+#letras-chutadas {
+    font-size: 2em;
+    color: blueviolet;
+    margin-bottom: 4%;
+    font-weight: bold;
+}
+
+#mensagem {
+    font-size: 4em;
+    color: blueviolet;
+    font-weight: bold;
+    display: none;
+}
+
+#botao-reiniciar {
+    display: none;
+    background-color: blueviolet;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+#botao-reiniciar:hover {
+    background-color: rgb(81, 27, 131);
+}
+
+#botao-reiniciar:active {
+    background-color: rgb(81, 27, 131);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

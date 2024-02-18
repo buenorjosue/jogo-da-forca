@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--TOPO-->
+    <h1>Jogo da Forca</h1>
+    <h2>Teste suas habilidades!</h2>
+    <img id="imagem" src="img/forca0.png" alt="forca">
+    <div id="exibicao-palavra"></div>
+    <input type="text" id="entrada-letra" placeholder="Chute uma letra!" maxlength="1">
+    <button id="btn-chutar">Chutar</button>
+
+    <!--BAIXO-->
+    <h2>Letras Chutadas</h2>
+    <div id="letras-chutadas"></div>
+    <div id="mensagem">Você Ganhou!</div><br>
+    <button id="botao-reiniciar">Jogar Novamente!</button>
+
+    <script>
+        //Palavras do jogo
+        const listaPalavras = ['Banana', 'Uva', 'Maçã', 'Morango', 'Abacaxi'];
+
+        let palavraEscolhida;
+        let exibicaoPalavra;
+        let letrasChutadas;
+        let tentativasRestantes;
+        let numErros;
+
+        //Função de iniciar o jogo
+        function iniciarJogo() {
+            //Escolhendo uma palavra da lista
+            palavraEscolhida = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
+            console.log(palavraEscolhida)
+
+            //Exibindo os Underlines
+            exibicaoPalavra = Array(palavraEscolhida.length).fill('_');
+            console.log(exibicaoPalavra)
+
+            //Inicializando a lista de letras chutadas
+            letrasChutadas = [];
+
+            //Definindo o num max de tentativas
+            tentativasRestantes = 7;
+
+            //Inicializando o num de erros
+            numErros = 0;
+
+            atualizarExibicao();
+        }
+
+        function atualizarExibicao() {
+            document.getElementById("exibicao-palavra").innerText = 'oi';
+        }
+
+        window.load = iniciarJogo();
+    </script>
+</body>
+
+</html>
