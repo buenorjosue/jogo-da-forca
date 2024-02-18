@@ -24,6 +24,7 @@ body {
 }
 
 #botao-reiniciar {
+    margin: auto;
     display: none;
     background-color: blueviolet;
     padding: 15px 25px;
